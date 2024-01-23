@@ -1,12 +1,12 @@
 const express = require("express");
 const connectDB =require('./src/database');
 const cors = require("cors");
-const mainRouter = require('./src/router/main.router');
-const userRouter = require('./src/router/user.router');
-const app = express();
 
 app.use(express.json());
 app.use(cors())
+const mainRouter = require('./src/router/main.router');
+const userRouter = require('./src/router/user.router');
+const app = express();
 
 connectDB();
 
